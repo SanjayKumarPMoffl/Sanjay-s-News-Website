@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sanjay's News Website</title>
+</head>
+<body>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#" onclick="reload()"><img src="images/logo.png" alt="" style="max-width: 80px;"></a>
+            </div>
+            <div class="options">
+                <ul>
+                    <li onclick="fetchNews('Jobs')">Jobs</li>
+                    <li onclick="fetchNews('Tech')">Tech</li>
+                    <li onclick="fetchNews('Stock')">Stocks</li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" id="search-text">
+                <button id="search-button">Submit</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container" id="container"></div>
+    </main>
+
+    <!-- Add a template element in your HTML -->
+    <template id="card-template">
+        <div class="card">
+            <div class="card-img">
+                <img src="#" alt="" id="news-img" style="max-width: 350px;">
+            </div>
+            <div class="content">
+                <h1 id="title">Title</h1>
+                <p id="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Ab reiciendis aperiam quos iure inventore sunt accusamus dolorem, 
+                    veritatis voluptatibus error qui dolorum enim dolore excepturi praesentium 
+                    beatae. Nisi accusantium exercitationem impedit architecto saepe, neque dicta 
+                    repellat quam! Iste, eum quibusdam.</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
